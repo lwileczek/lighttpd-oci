@@ -1,7 +1,7 @@
 FROM debian:buster-slim
 
 RUN apt-get update && apt-get -y upgrade && \
-    apt-get -y install lighttpd && \
+    apt-get -y install lighttpd php-fpm php && \
     mkdir -p /var/cache/lighttpd/compress/ && \
     echo "Hello, World" > /var/www/html/index.html
 
